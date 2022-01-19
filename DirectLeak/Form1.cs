@@ -81,7 +81,7 @@ namespace DirectLeak
                 }
 
                 using (var brush = new SolidColorBrush(dcTarget, new SharpDX.Mathematics.Interop.RawColor4(0, 0, 0, 1)))
-                using (var textFormat = new TextFormat(factory, "Open Sans", 24F))
+                using (var textFormat = new TextFormat(factory, "Arial", 24F))
                 {
                     const string textString = "T";
                     dcTarget.DrawText(textString, textFormat, new RawRectangleF(100, 100, 200, 200), brush);
@@ -91,7 +91,7 @@ namespace DirectLeak
                         var newLogFont = new LOGFONT
                         {
                             lfCharSet = 0,
-                            lfFaceName = "Open Sans"
+                            lfFaceName = "Arial"
                         };
 
                         using (var font = interop.FromLogFont(newLogFont))
